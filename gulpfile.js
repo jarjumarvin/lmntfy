@@ -65,9 +65,11 @@ gulp.task('html', function() {
 		.pipe(connect.reload())
 });
 
-gulp.task('deploy', function() {
+gulp.task('pages', function() {
 	return gulp.src("./dist/**/*")
 		.pipe(deploy())
 });
+
+gulp.task('deploy', ['html', 'media', 'js', 'sass', 'copy', 'pages']);
 
 gulp.task('default', ['html', 'media', 'js', 'sass', 'copy', 'connect', 'watch']);

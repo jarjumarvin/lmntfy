@@ -1,6 +1,7 @@
 $(function() {
     console.log("Hello World from Main Javascript")
 
+    var query = "새옹지마"
     var fakeMouse = $(".fake-mouse");
     var topBarInput = $(".browser-frame-top-bar-input");
     var topBarInputField = $(".browser-frame-top-bar-input-url");
@@ -43,7 +44,7 @@ $(function() {
         }, 1800, 'swing', function() {
             setTimeout(function(){
                 fakeMouse.hide();
-                type(searchBarInputField, "사전", 0);
+                type(searchBarInputField, query, 0);
             }, 200);
         });
     }
@@ -54,7 +55,9 @@ $(function() {
             top: (button.offset().top + 25),
             left: (button.offset().left + 25)
         }, 1500, 'swing', function() {
-            console.log('we done bois');
+            setTimeout(function() {
+                window.location.replace("https://endic.naver.com/search.nhn?sLn=kr&isOnlyViewEE=N&query=" + query)
+            })
         });
     }
 });
