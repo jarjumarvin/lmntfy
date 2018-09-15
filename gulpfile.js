@@ -8,11 +8,17 @@ var gulp = require('gulp'),
 var jsSources = ['src/scripts/*.js'],
 	sassSources = ['src/styles/*.scss'],
 	htmlSources = ['**/*.html'],
+	mediaSources = ['src/media/*.*'],
 	outputDir = 'assets';
 
 gulp.task('copy', function() {
-	gulp.src('index.html')
+	gulp.src('src/index.html')
 		.pipe(gulp.dest(outputDir))
+});
+
+gulp.task('media', function() {
+	gulp.src(mediaSources)
+		.pipe(gulp.dest(outputDir + '/media'))
 });
 
 gulp.task('sass', function() {
@@ -37,11 +43,12 @@ gulp.task('watch', function() {
 	gulp.watch(jsSources, ['js']);
 	gulp.watch(sassSources, ['sass']);
 	gulp.watch(htmlSources, ['html']);
+	gulp.watch(mediaSources, ['media']);
 });
 
 gulp.task('connect', function() {
 	connect.server({
-		root: '.',
+		root: './assets',
 		livereload: true
 	})
 });
@@ -51,4 +58,4 @@ gulp.task('html', function() {
 		.pipe(connect.reload())
 });
 
-gulp.task('default', ['html', 'js', 'sass', 'connect', 'watch']);
+gulp.task('default', ['html', 'copy', 'media', 'js', 'sass', 'connect', 'watch']);
