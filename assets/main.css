@@ -1,7 +1,9 @@
 .browser-frame {
+  position: fixed;
+  top: 50px;
+  left: 50px;
   width: 100%;
-  zoom: 1;
-  max-zoom: 1; }
+  zoom: 1; }
 
 .browser-frame-top-bar {
   display: table; }
@@ -27,6 +29,10 @@
   background: no-repeat url("media/top-bar-right.png");
   background-size: contain;
   width: 360px; }
+
+.browser-frame-top-bar-input-url {
+  line-height: 50px;
+  max-width: 500px; }
 
 .browser-frame-content {
   height: 600px; }
@@ -60,8 +66,32 @@
   background-size: contain;
   width: 335px; }
 
+.browser-frame-content-search-bar-input-text {
+  line-height: 62px;
+  max-width: 300px;
+  font-size: 16pt; }
+
+.browser-frame-content-search-bar-right-left {
+  display: table-cell;
+  background: no-repeat url("media/content-search-bar-right-left.png");
+  background-size: contain;
+  width: 39px; }
+
+.browser-frame-content-search-bar-right-button {
+  display: table-cell;
+  background: no-repeat url("media/content-search-bar-right-button.png");
+  background-size: contain;
+  width: 70px; }
+
 .browser-frame-content-search-bar-right {
   display: table-cell;
   background: no-repeat url("media/content-search-bar-right.png");
   background-size: contain;
-  width: 605px; }
+  width: 496px; }
+
+.fake-mouse {
+  position: fixed;
+  display: none;
+  background-image: no-repeat url("media/mouse_arrow");
+  height: 21px;
+  width: 15px; }

@@ -1,10 +1,15 @@
 {
   "devDependencies": {
     "gulp": "latest",
-    "gulp-util": "latest",
+    "gulp-concat": "latest",
+    "gulp-connect": "latest",
     "gulp-sass": "latest",
     "gulp-uglify": "latest",
-    "gulp-concat": "latest",
-    "gulp-connect": "latest"
+    "gulp-util": "latest",
+    "jquery": "^3.3.1"
+  },
+  "dependencies": {
+    "gulp-clean": "^0.4.0",
+    "gulp-uglify-es": "^1.0.4"
   }
 }

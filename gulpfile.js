@@ -2,7 +2,8 @@ var gulp = require('gulp'),
 	gutil = require('gulp-util'),
 	sass = require('gulp-sass'),
 	connect = require('gulp-connect'),
-	uglify = require('gulp-uglify'),
+	uglify = require('gulp-uglify-es').default,
+	clean = require('gulp-clean'),
 	concat = require('gulp-concat');
 
 var jsSources = ['src/scripts/*.js'],
@@ -53,9 +54,14 @@ gulp.task('connect', function() {
 	})
 });
 
+gulp.task('clean', function() {
+	gulp.src(outputDir)
+		.pipe(clean())
+});
+
 gulp.task('html', function() {
 	gulp.src(htmlSources)
 		.pipe(connect.reload())
 });
 
-gulp.task('default', ['html', 'copy', 'media', 'js', 'sass', 'connect', 'watch']);
+gulp.task('default', ['html', 'media', 'js', 'sass', 'copy', 'connect', 'watch']);
