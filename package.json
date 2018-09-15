@@ -3,6 +3,7 @@
     "gulp": "latest",
     "gulp-concat": "latest",
     "gulp-connect": "latest",
+    "gulp-gh-pages": "^0.5.4",
     "gulp-sass": "latest",
     "gulp-uglify": "latest",
     "gulp-util": "latest",

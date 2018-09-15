@@ -4,13 +4,14 @@ var gulp = require('gulp'),
 	connect = require('gulp-connect'),
 	uglify = require('gulp-uglify-es').default,
 	clean = require('gulp-clean'),
-	concat = require('gulp-concat');
+	concat = require('gulp-concat'),
+	deploy = require('gulp-gh-pages');
 
 var jsSources = ['src/scripts/*.js'],
 	sassSources = ['src/styles/*.scss'],
 	htmlSources = ['**/*.html'],
 	mediaSources = ['src/media/*.*'],
-	outputDir = 'assets';
+	outputDir = 'dist';
 
 gulp.task('copy', function() {
 	gulp.src('src/index.html')
@@ -28,7 +29,7 @@ gulp.task('sass', function() {
 			style: 'expanded'
 		}))
 		.on('error', gutil.log)
-		.pipe(gulp.dest('assets'))
+		.pipe(gulp.dest(outputDir))
 		.pipe(connect.reload())
 });
 
@@ -49,7 +50,7 @@ gulp.task('watch', function() {
 
 gulp.task('connect', function() {
 	connect.server({
-		root: './assets',
+		root: './dist',
 		livereload: true
 	})
 });
@@ -62,6 +63,11 @@ gulp.task('clean', function() {
 gulp.task('html', function() {
 	gulp.src(htmlSources)
 		.pipe(connect.reload())
+});
+
+gulp.task('deploy', function() {
+	return gulp.src("./dist/**/*")
+		.pipe(deploy())
 });
 
 gulp.task('default', ['html', 'media', 'js', 'sass', 'copy', 'connect', 'watch']);
