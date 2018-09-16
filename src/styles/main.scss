@@ -5,6 +5,8 @@
 .browser-frame {
 	margin-top: 48px;
 	cursor: not-allowed;
+	margin-left: auto;
+	margin-right: auto;
 	min-width: 1300px;
 	max-width: 1300px;
 	zoom: 0.9;
@@ -47,6 +49,15 @@
 
 // CONTENT
 .browser-frame-content {
+	display: none;
+	height: 600px;
+}
+
+.browser-frame-background {
+	display: block;
+	background: no-repeat url('media/bg.png');
+	background-size: contain;
+	width: 1300px;
 	height: 600px;
 }
 
@@ -140,6 +151,18 @@
 	font-size: 14px;
 	padding: 1em;
 	border-radius: 3px;
+}
+
+.search-instruction-one {
+	visibility: visible;
+}
+
+.search-instruction-two {
+	visibility: hidden;
+}
+
+.search-instruction-three {
+	visibility: hidden;
 }
 
 .search-instruction-step-number {
