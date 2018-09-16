@@ -7,9 +7,11 @@
     "gulp-sass": "latest",
     "gulp-uglify": "latest",
     "gulp-util": "latest",
-    "jquery": "^3.3.1"
+    "jquery": "^3.3.1",
+    "sweetalert": "^2.1.0"
   },
   "dependencies": {
+    "clipboard": "^2.0.1",
     "gulp-clean": "^0.4.0",
     "gulp-uglify-es": "^1.0.4"
   }
