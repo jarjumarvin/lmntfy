@@ -128,9 +128,13 @@ $(function() {
                     title: "Link Created",
                     text: "copied to clipboard",
                     icon: "success"
+                }).then((value) => {
+                    input.focus();
                 });
+                return false;
             } else {
                 input.val('');
+                return false;
             }
         }
      }
