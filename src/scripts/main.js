@@ -10,8 +10,8 @@ $(function() {
     var query = getUrlParameter('q')
     if(query != '') {
         setTimeout(function() {
-            var container = $(".container");
-            container.show();
+            var containerMain = $(".container");
+            containerMain.show();
             var fakeMouse = $(".fake-mouse");
             var topBarInput = $(".browser-frame-top-bar-input");
             var topBarInputField = $(".browser-frame-top-bar-input-url");
@@ -85,8 +85,8 @@ $(function() {
             }
         }, 1500);
     } else {
-        var container = $(".link-generator-container");
-        container.show();
+        var containerGenerator = $(".link-generator-container");
+        containerGenerator.show();
 
         var input = $(".form__field");
         var button = $(".btn");
