@@ -122,9 +122,16 @@ function displayLinkGenerator() {
             input.val('')
             copyStringToClipboard(query);
             swal({
-                title: "Success",
-                text: "link has been copied to clipboard",
-                icon: "success"
+                title: "Link copied to clipboard.",
+                icon: "success",
+                buttons: {
+                    cancel: "Ok",
+                    confirm: "Preview",
+                },
+            }).then((value) => {
+                if(value) {
+                    window.location.replace(query);
+                }
             });
             return false;
         } else {

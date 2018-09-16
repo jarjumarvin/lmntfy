@@ -105,6 +105,10 @@ html, body {
 }
 
 .browser-frame-content-search-bar-input-text {
+	display: inline-block;
+	white-space: nowrap;
+	overflow: hidden;
+	width: 300px;
 	font-size: 16pt;
 	line-height: 62px;
 }
