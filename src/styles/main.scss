@@ -8,6 +8,7 @@ html, body {
 // TOP BAR
 .container {
 	display: none;
+	height: 100%;
 }
 .browser-frame {
 	margin-top: 48px;
@@ -200,7 +201,7 @@ h1 {
 	height: 100%;
 	background: #f7f7f7;
 	color: $text;
-	display: flex;
+	display: none;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
