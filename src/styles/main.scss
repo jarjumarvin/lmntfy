@@ -1,13 +1,13 @@
-.browser-frame {
-}
-
 // TOP BAR
+.container {
+
+}
 .browser-frame {
-	position: fixed;
-	top:50px;
-	left:50px;
-	width: 100%;
-	zoom: 0.80;
+	margin-top: 48px;
+	cursor: not-allowed;
+	min-width: 1300px;
+	max-width: 1300px;
+	zoom: 0.9;
 }
 
 .browser-frame-top-bar {
@@ -46,7 +46,6 @@
 }
 
 // CONTENT
-
 .browser-frame-content {
 	height: 600px;
 }
@@ -87,9 +86,8 @@
 }
 
 .browser-frame-content-search-bar-input-text {
-	line-height: 62px;
-	max-width: 300px;
 	font-size: 16pt;
+	line-height: 62px;
 }
 
 
@@ -120,4 +118,31 @@
 	background-image: no-repeat url('media/mouse_arrow');
 	height: 21px;
 	width: 15px;
+}
+
+//INSTRUCTIONS
+.search-instructions {
+	margin-top: 32px;
+	display: table;
+	border-spacing: 10px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.search-instruction-row {
+	display: table-row;
+	width: 660px;
+}
+.search-instruction {
+	display: table-cell;
+	width: 180px;
+	background-color: #f0f9fc;
+	border: solid 1px #85d0e7;
+	font-size: 14px;
+	padding: 1em;
+	border-radius: 3px;
+}
+
+.search-instruction-step-number {
+	display: block;
+	color: #999999;
 }

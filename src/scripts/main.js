@@ -1,7 +1,7 @@
 $(function() {
     console.log("Hello World from Main Javascript")
 
-    var query = "새옹지마"
+    var query = getUrlParameter('q');
     var fakeMouse = $(".fake-mouse");
     var topBarInput = $(".browser-frame-top-bar-input");
     var topBarInputField = $(".browser-frame-top-bar-input-url");
@@ -56,8 +56,15 @@ $(function() {
             left: (button.offset().left + 25)
         }, 1500, 'swing', function() {
             setTimeout(function() {
-                window.location.replace("https://endic.naver.com/search.nhn?sLn=kr&isOnlyViewEE=N&query=" + query)
+                //window.location.replace("https://endic.naver.com/search.nhn?sLn=kr&isOnlyViewEE=N&query=" + query)
             })
         });
     }
+
+    function getUrlParameter(name) {
+        name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+        var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+        var results = regex.exec(location.search);
+        return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+    };
 });

@@ -16,37 +16,56 @@
 </head>
 
 <body>
-    <div class="browser-frame">
-        <div class="browser-frame-top-bar">
-            <div class="browser-frame-top-bar-row">
-                <div class="browser-frame-top-bar-left"></div>
-                <div class="browser-frame-top-bar-input">
-                    <span class="browser-frame-top-bar-input-url ng-binding" ng-bind="url"></span>
-                </div>
-                <div class="browser-frame-top-bar-right"></div>
-            </div>
-        </div>
-        <div class="browser-frame-content">
-            <div class="browser-frame-content-header"></div>
-            <div class="browser-frame-content-search-bar">
-                <div class="browser-frame-content-search-bar-row">
-                    <div class="browser-frame-content-search-bar-left"></div>
-                    <div class="browser-frame-content-search-bar-input">
-                        <span class="browser-frame-content-search-bar-input-text"></span>
+    <div class="container">
+        <div class="browser-frame">
+            <div class="browser-frame-top-bar">
+                <div class="browser-frame-top-bar-row">
+                    <div class="browser-frame-top-bar-left"></div>
+                    <div class="browser-frame-top-bar-input">
+                        <span class="browser-frame-top-bar-input-url ng-binding" ng-bind="url"></span>
                     </div>
-                    <div class="browser-frame-content-search-bar-right-left"></div>
-                    <div class="browser-frame-content-search-bar-right-button"></div>
-                    <div class="browser-frame-content-search-bar-right"></div>
-
+                    <div class="browser-frame-top-bar-right"></div>
                 </div>
             </div>
-            <div class="browser-frame-content-footer"></div>
+            <div class="browser-frame-content">
+                <div class="browser-frame-content-header"></div>
+                <div class="browser-frame-content-search-bar">
+                    <div class="browser-frame-content-search-bar-row">
+                        <div class="browser-frame-content-search-bar-left"></div>
+                        <div class="browser-frame-content-search-bar-input">
+                            <span class="browser-frame-content-search-bar-input-text"></span>
+                        </div>
+                        <div class="browser-frame-content-search-bar-right-left"></div>
+                        <div class="browser-frame-content-search-bar-right-button"></div>
+                        <div class="browser-frame-content-search-bar-right"></div>
+
+                    </div>
+                </div>
+                <div class="browser-frame-content-footer"></div>
+            </div>
+
+            <img class="fake-mouse" src="media/mouse_arrow.png" />
+        </div>
+        <div class="search-instructions">
+            <div class="search-instruction-row">
+                <div class=search-instruction>
+                    <span class="search-instruction-step-number">Step 1</span>
+                    <span class="search-instruction-step-text">Visit endic.naver.com</span>
+                </div>
+                <div class=search-instruction>
+                    <span class="search-instruction-step-number">Step 2</span>
+                    <span class="search-instruction-step-text">Type your term or word.</span>
+                </div>
+                <div class=search-instruction>
+                    <span class="search-instruction-step-number">Step 3</span>
+                    <span class="search-instruction-step-text">Click the button.</span>
+                </div>
+            </div>
         </div>
 
-        <img class="fake-mouse" src="media/mouse_arrow.png" />
+        <script src=" https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js "></script>
+        <script src="script.js "></script>
     </div>
-    <script src=" https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js "></script>
-    <script src="script.js "></script>
 </body>
 
 </html>
