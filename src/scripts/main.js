@@ -92,18 +92,12 @@ $(function() {
         var output = $(".link-result");
 
         button.click(function() {
-            if(input.val() != '') {
-                var query = "https://jarjumarvin.github.io/lmntfy/?q=" + input.val();
-                console.log(query);
-                input.val('')
-                copyStringToClipboard(query);
-                swal({
-                    title: "Link Created",
-                    text: "copied to clipboard",
-                    icon: "success"
-                });
-            } else {
-                input.val('');
+            generateLink();
+        });
+
+        input.on('keyup', function(e) {
+            if(e.keyCode == 13) {
+                generateLink();
             }
         });
 
@@ -122,6 +116,22 @@ $(function() {
            document.execCommand('copy');
            // Remove temporary element
            document.body.removeChild(el);
+        }
+
+        function generateLink() {
+            if(input.val() != '') {
+                var query = "https://jarjumarvin.github.io/lmntfy/?q=" + input.val();
+                console.log(query);
+                input.val('')
+                copyStringToClipboard(query);
+                swal({
+                    title: "Link Created",
+                    text: "copied to clipboard",
+                    icon: "success"
+                });
+            } else {
+                input.val('');
+            }
         }
      }
 });
