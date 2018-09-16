@@ -3,7 +3,7 @@
 
 html, body {
 	height: 100%;
-	font-family: 'Open Sans', 'sans-serif';
+	font-family: 'Nanum Gothic', 'sans-serif';
 }
 // TOP BAR
 .container {
@@ -149,7 +149,7 @@ html, body {
 }
 .search-instruction-row {
 	display: table-row;
-	width: 660px;
+	width: 800px;
 }
 .search-instruction {
 	display: table-cell;
@@ -175,11 +175,18 @@ html, body {
 
 .search-instruction-step-number {
 	display: block;
-	color: #999999;
+	color: #212121;
+	font-size: 18px;
+	font-weight: bold;
+}
+
+.search-instruction-step-text {
+	display: block;
+	color: #424242
 }
 
 //** variables
-$background: #f5f6fa;
+$background: #F5F5F5;
 $text: #9c9c9c;
 $input-bg-color: #fff;
 $input-text-color: #000;
@@ -187,25 +194,40 @@ $button-bg-color: #00C73C;
 $button-text-color: #fff;
 
 h1 {
+	margin-left: auto;
+	margin-right: auto;
 	font-family: 'Nanum Gothic';
 	font-size: 76px;
-	margin-bottom: 24px;
+	margin-bottom: 36px;
 	color: #212121;
 	font-weight: normal;
-	text-align: center;
 }
 
 
 //** helper
 .container-generator {
+	margin-left: auto;
+	margin-right: auto;
 	min-width: 440px;
 	height: 100%;
-	background: #f7f7f7;
+	background: $background;
 	color: $text;
 	display: none;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
+}
+
+p {
+	margin-top: 24px;
+}
+
+a {
+	color: $button-bg-color;
+
+	&:hover {
+		color: $button-bg-color;
+	}
 }
 
 .uppercase {
@@ -227,7 +249,7 @@ h1 {
 	&--primary {
 		background: $button-bg-color;
 		color: $button-text-color;
-		box-shadow: 0 0 10px 2px rgba(0, 0, 0, .1);
+		box-shadow: 0 0 10px 2px rgba(0, 0, 0, .2);
 		border-radius: 2px;
 		padding: 12px 36px;
 
@@ -237,25 +259,25 @@ h1 {
 
 		&:active {
 			background: $button-bg-color;
-			box-shadow: inset 0 0 10px 2px rgba(0, 0, 0, .2);
+			box-shadow: inset 0 0 1px 2px rgba(0, 0, 0, .5);
 		}
 	}
 
 	&--inside {
-		margin-left: -96px;
+		margin-left: -130px;
 	}
 }
 
 //** form
 .form {
 	&__field {
-		width: 360px;
+		width: 400px;
 		background: #fff;
 		color: $input-text-color;
 		font-weight: bolder;
-		box-shadow: 0 6px 10px 0 rgba(0, 0, 0 , .1);
+		box-shadow: 2px 8px 8px 0 rgba(0, 0, 0 , .2);
 		border: 0;
 		outline: 0;
-		padding: 22px 18px;
+		padding: 18px 140px 18px 22px;
 	}
 }
