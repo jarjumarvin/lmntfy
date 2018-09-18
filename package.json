@@ -3,16 +3,14 @@
     "gulp": "latest",
     "gulp-concat": "latest",
     "gulp-connect": "latest",
-    "gulp-gh-pages": "^0.5.4",
+    "gulp-gh-pages": "latest",
     "gulp-sass": "latest",
     "gulp-uglify": "latest",
     "gulp-util": "latest",
-    "jquery": "^3.3.1",
-    "sweetalert": "^2.1.0"
-  },
-  "dependencies": {
-    "clipboard": "^2.0.1",
-    "gulp-clean": "^0.4.0",
-    "gulp-uglify-es": "^1.0.4"
+    "jquery": "latest",
+    "sweetalert": "latest",
+    "clipboard": "latest",
+    "gulp-clean": "latest",
+    "gulp-uglify-es": "latest"
   }
 }
