@@ -24,14 +24,13 @@ function googleItForThem(query) {
     var searchBarInput = $(".browser-frame-content-search-bar-input");
     var searchBarInputField = $(".browser-frame-content-search-bar-input-text");
 
-    var browserFrameContent = $(".browser-frame-content")
-    var background = $(".browser-frame-background")
-
+    var browserFrameContent = $(".browser-frame-content");
+    var browserFrameOutline = $(".browser-frame-outline");
     var button = $(".browser-frame-content-search-bar-right-button");
 
-    var instructionOne = $(".search-instruction-one")
-    var instructionTwo = $(".search-instruction-two")
-    var instructionThree = $(".search-instruction-three")
+    var instructionOne = $(".search-instruction-one");
+    var instructionTwo = $(".search-instruction-two");
+    var instructionThree = $(".search-instruction-three");
 
     fakeMouse.show();
     fakeMouse.animate({
@@ -62,7 +61,7 @@ function googleItForThem(query) {
         fakeMouse.show();
         instructionTwo.css("visibility", "visible");
         setTimeout(function() {
-            background.hide();
+            browserFrameOutline.hide();
             browserFrameContent.show();
             fakeMouse.animate({
                 top: (searchBarInput.offset().top + 25),
@@ -84,7 +83,7 @@ function googleItForThem(query) {
             left: (button.offset().left + 25)
         }, 1500, 'swing', function() {
             setTimeout(function() {
-                window.location.replace("https://endic.naver.com/search.nhn?sLn=kr&isOnlyViewEE=N&query=" + query)
+                //window.location.replace("https://endic.naver.com/search.nhn?sLn=kr&isOnlyViewEE=N&query=" + query)
             }, 300);
         });
         }

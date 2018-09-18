@@ -10,42 +10,58 @@ html, body {
 	display: none;
 	height: 100%;
 }
+
+h1.container-title {
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	font-family: 'Nanum Gothic';
+	font-size: 48px;
+	color: #212121;
+	font-weight: normal;
+}
+
 .browser-frame {
-	margin-top: 48px;
+	margin-top: 30px;
 	cursor: not-allowed;
 	margin-left: auto;
 	margin-right: auto;
-	min-width: 1300px;
-	max-width: 1300px;
-	zoom: 0.9;
+	width: 1300px;
+}
+
+.browser-frame-outline {
+	background: no-repeat url('./media/outline.png');
+	background-size: contain;
+	width: 1300px;
+	height:600px;
 }
 
 .browser-frame-top-bar {
 	display: table;
+	height: 50px;
 }
 
 .browser-frame-top-bar-row {
 	display: table-row;
-	height: 50px;
 }
 
 .browser-frame-top-bar-left {
 	display: table-cell;
-	background: no-repeat url('media/top-bar-left.png');
+	background: no-repeat url('./media/top-bar-left.png');
 	background-size: contain;
 	width: 400px;
 }
 
 .browser-frame-top-bar-input {
 	display: table-cell;
-	background: no-repeat url('media/top-bar-input.png');
+	background: no-repeat url('./media/top-bar-input.png');
 	background-size: contain;
 	width: 540px;
 }
 
 .browser-frame-top-bar-right {
 	display: table-cell;
-	background: no-repeat url('media/top-bar-right.png');
+	background: no-repeat url('./media/top-bar-right.png');
 	background-size: contain;
 	width: 360px;
 }
@@ -58,25 +74,21 @@ html, body {
 // CONTENT
 .browser-frame-content {
 	display: none;
-	height: 600px;
-}
-
-.browser-frame-background {
-	display: block;
-	background: no-repeat url('media/bg.png');
+	background: no-repeat url('./media/backdrop.png');
 	background-size: contain;
-	width: 1300px;
 	height: 600px;
+	width: 1300px;
 }
 
 .browser-frame-content-header {
-	background: no-repeat url('media/content-header.png');
+	background: no-repeat url('./media/content-header.png');
 	background-size: contain;
 	height: 303px;
+	width: 1300px;
 }
 
 .browser-frame-content-footer {
-	background: no-repeat url('media/content-footer.png');
+	background: no-repeat url('./media/content-footer.png');
 	background-size: contain;
 	height: 235px;
 }
@@ -92,14 +104,14 @@ html, body {
 
 .browser-frame-content-search-bar-left {
 	display: table-cell;
-	background: no-repeat url('media/content-search-bar-left.png');
+	background: no-repeat url('./media/content-search-bar-left.png');
 	background-size: contain;
 	width: 360px;
 }
 
 .browser-frame-content-search-bar-input {
 	display: table-cell;
-	background: no-repeat url('media/content-search-bar-input.png');
+	background: no-repeat url('./media/content-search-bar-input.png');
 	background-size: contain;
 	width: 335px;
 }
@@ -116,21 +128,21 @@ html, body {
 
 .browser-frame-content-search-bar-right-left {
 	display: table-cell;
-	background: no-repeat url('media/content-search-bar-right-left.png');
+	background: no-repeat url('./media/content-search-bar-right-left.png');
 	background-size: contain;
 	width: 39px;
 }
 
 .browser-frame-content-search-bar-right-button {
 	display: table-cell;
-	background: no-repeat url('media/content-search-bar-right-button.png');
+	background: no-repeat url('./media/content-search-bar-right-button.png');
 	background-size: contain;
 	width: 70px;
 }
 
 .browser-frame-content-search-bar-right {
 	display: table-cell;
-	background: no-repeat url('media/content-search-bar-right.png');
+	background: no-repeat url('./media/content-search-bar-right.png');
 	background-size: contain;
 	width: 496px;
 }
@@ -138,7 +150,7 @@ html, body {
 .fake-mouse {
 	position: fixed;
 	display: none;
-	background-image: no-repeat url('media/mouse_arrow');
+	background-image: no-repeat url('./media/mouse_arrow');
 	height: 21px;
 	width: 15px;
 }
@@ -197,7 +209,7 @@ $input-text-color: #000;
 $button-bg-color: #00C73C;
 $button-text-color: #fff;
 
-h1 {
+h1.container-generator-title {
 	margin-left: auto;
 	margin-right: auto;
 	font-family: 'Nanum Gothic';
