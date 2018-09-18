@@ -83,7 +83,7 @@ function googleItForThem(query) {
             left: (button.offset().left + 25)
         }, 1500, 'swing', function() {
             setTimeout(function() {
-                //window.location.replace("https://endic.naver.com/search.nhn?sLn=kr&isOnlyViewEE=N&query=" + query)
+                window.location.replace("https://endic.naver.com/search.nhn?sLn=kr&isOnlyViewEE=N&query=" + query)
             }, 300);
         });
         }
