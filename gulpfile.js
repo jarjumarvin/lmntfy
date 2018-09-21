@@ -1,5 +1,5 @@
 var gulp = require('gulp'),
-	gutil = require('gulp-util'),
+	log = require('fancy-log'),
 	sass = require('gulp-sass'),
 	connect = require('gulp-connect'),
 	uglify = require('gulp-uglify-es').default,
@@ -28,7 +28,6 @@ gulp.task('sass', function() {
 		.pipe(sass({
 			style: 'expanded'
 		}))
-		.on('error', gutil.log)
 		.pipe(gulp.dest(outputDir))
 		.pipe(connect.reload())
 });
